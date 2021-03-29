@@ -1,0 +1,25 @@
+{
+  "publicRuntimeConfig": {
+    "title": "ARC",
+    "dev": false,
+    "loginDisabled": false,
+    "logo": "./logo.svg",
+    "apiServer": "https://127.0.0.1:3030",
+    "appServer": "https://127.0.0.1:3000",
+    "siteTitle": "ARC",
+    "siteDescription": "Connected Worlds for Everyone",
+    "featherStoreKey": "TheOverlay-Auth-Store",
+    "localStorageKey": "arc-client-store-key-v1",
+    "auth": {
+      "enableSmsMagicLink": true,
+      "enableEmailMagicLink": true,
+      "enableUserPassword": true,
+      "enableGithubSocial": true,
+      "enableFacebookSocial": true,
+      "enableGoogleSocial": true
+    },
+    "alert": {
+      "timeout": 10000
+    }
+  }
+}
