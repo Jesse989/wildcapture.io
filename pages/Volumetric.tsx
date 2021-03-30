@@ -2,7 +2,7 @@ import React, { Fragment } from 'react'
 import dynamic from 'next/dynamic'
 import ReactNoSSR from 'react-no-ssr';
 
-const VolumetricPlayer = dynamic(() => import('../components/VolumetricPlayer'))
+const VolumetricPlayer = dynamic(() => import('../components/VolumetricPlayer'), { ssr: false })
 
 export default () => {
     return (

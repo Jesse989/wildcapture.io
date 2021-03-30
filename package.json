@@ -13,7 +13,8 @@
   "jest": "ts-jest",
   "scripts": {
     "start": "next start",
-    "build": "next build",
+    "build": "next build && next export -o build",
+    "export": "next export -o build",
     "dev": "next dev"
   },
   "resolutions": {
