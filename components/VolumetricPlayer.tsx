@@ -16,7 +16,7 @@ import DracosisPlayer from "@xr3ngine/volumetric/src/Player"
   const cameraVerticalOffset = 0.4;
   const cameraFov = 35;
 
-  export const VolumetricPlayer = (props) => {
+  export default (props) => {
 
     const containerRef = useRef();
     const rendererRef = useRef(null);

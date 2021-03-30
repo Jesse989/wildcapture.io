@@ -1,13 +1,16 @@
 import React, { Fragment } from 'react'
-import { VolumetricPlayer } from '../components/VolumetricPlayer';
+import ReactNoSSR from 'react-no-ssr';
+import dynamic from 'next/dynamic'
+
+const VolumetricPlayer = dynamic(() => import('../components/VolumetricPlayer'))
 
 export default () => {
-  const meshFilePath = document.location.origin + "/samburchfield_tryagain_low.drcs";
-  const videoFilePath = document.location.origin + "/samburchfield_tryagain_low.mp4";
     return (
         <Fragment>
             <section className="volumetric__wrapper" >
-              <VolumetricPlayer style={{ width: '100%', height: '100%' }} meshFilePath={meshFilePath} videoFilePath={videoFilePath} />
+              <ReactNoSSR>
+                <VolumetricPlayer style={{ width: '100%', height: '100%' }} meshFilePath={"/samburchfield_tryagain_low.drcs"} videoFilePath={"/samburchfield_tryagain_low.mp4"} />
+              </ReactNoSSR>
             </section>
         </Fragment>
     )
