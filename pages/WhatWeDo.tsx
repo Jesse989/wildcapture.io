@@ -4,7 +4,7 @@ import { Expertise } from '../components/Expertise'
 import { Partners } from '../components/Partners'
 import { Pipeline } from '../components/Pipeline'
 
-export const WhatWeDo = () => {
+export default () => {
     return (
         <Fragment>
             <section className="whatwedo__banner" >

@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react'
 import { VolumetricPlayer } from '../components/VolumetricPlayer';
 
-export const Volumetric = () => {
+export default () => {
   const meshFilePath = document.location.origin + "/liam.drcs";
   const videoFilePath = document.location.origin + "/liam.mp4";
     return (

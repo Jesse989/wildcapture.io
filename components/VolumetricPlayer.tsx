@@ -32,8 +32,8 @@ import DracosisPlayer from "@xr3ngine/volumetric/src/Player"
       if (typeof container === "undefined") {
         return;
       }
-      let w = container.clientWidth,
-        h = container.clientHeight;
+      let w = (container as any).clientWidth ,
+        h = (container as any).clientHeight;
       const scene = new Scene(),
         camera = new PerspectiveCamera(cameraFov, w / h, 0.001, 100),
         controls = new OrbitControls(camera, container),
@@ -49,10 +49,10 @@ import DracosisPlayer from "@xr3ngine/volumetric/src/Player"
       renderer.outputEncoding = sRGBEncoding;
       renderer.setPixelRatio(window.devicePixelRatio);
       renderer.setSize(w, h);
-      container.appendChild(renderer.domElement);
+      (container as any).appendChild(renderer.domElement);
       const onResize = function () {
-        w = container.clientWidth;
-        h = container.clientHeight;
+        w = (container as any).clientWidth;
+        h = (container as any).clientHeight;
         camera.aspect = w / h;
         camera.updateProjectionMatrix();
         renderer.setSize(w, h);
@@ -125,14 +125,14 @@ import DracosisPlayer from "@xr3ngine/volumetric/src/Player"
   'frame-show'
   'error'
        */
-      player.addEventListener('mesh-frames-buffering', (progress) => {
-        console.warn('BUFFERING!!', progress);
-        setBufferingProgress(Math.round(progress * 100));
-        setIsBuffering(true);
-      });
-      player.addEventListener('frame-show', () => {
-        setIsBuffering(false);
-      });
+      // player.addEventListener('mesh-frames-buffering', (progress) => {
+      //   console.warn('BUFFERING!!', progress);
+      //   setBufferingProgress(Math.round(progress * 100));
+      //   setIsBuffering(true);
+      // });
+      // player.addEventListener('frame-show', () => {
+      //   setIsBuffering(false);
+      // });
 
       console.log('+++  dracosisSequence')
 
@@ -143,30 +143,30 @@ import DracosisPlayer from "@xr3ngine/volumetric/src/Player"
 
         // clear volumetric player
         // DracosisSequence.dispose();
-        console.log('+++ CLEANUP player', !!player, !!player?._video);
-        if (player && player?._video) {
+        console.log('+++ CLEANUP player', !!player, !!(player as any)?._video);
+        if (player && (player as any)?._video) {
 
           // player._video.stop();
-          player._video.pause();
-          player._video.parentElement.removeChild(player._video)
+          (player as any)._video.pause();
+          (player as any)._video.parentElement.removeChild((player as any)._video)
 
-          player._video = null
-          player._videoTexture.dispose()
-          player._videoTexture = null
+          if((player as any)!== null) { (player as any)._video = null }
+          (player as any)._videoTexture.dispose()
+          (player as any)._videoTexture = null
           window.removeEventListener("resize", onResize)
           cancelAnimationFrame(animationFrameId)
-          controls.dispose()
-          player.worker.terminate()
-          if (player.bufferingTimer) {
-            clearInterval(player.bufferingTimer)
+          controls.dispose();
+          (player as any).worker.terminate()
+          if ((player as any).bufferingTimer) {
+            clearInterval((player as any).bufferingTimer)
           }
-          if (player.meshBuffer) {
-            player.meshBuffer.array?.forEach(element => {
+          if ((player as any).meshBuffer) {
+            (player as any).meshBuffer.array?.forEach(element => {
               if (element) {
                 element.bufferGeometry.dispose()
               }
             })
-            player.meshBuffer.clear()
+            (player as any).meshBuffer.clear()
           }
         }
         setDracosisSequence(null);
