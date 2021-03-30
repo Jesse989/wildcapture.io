@@ -39,7 +39,7 @@
     "@types/react-router-dom": "^5.1.7",
     "@typescript-eslint/eslint-plugin": "^4.5.0",
     "@xr3ngine/common": "^0.2.0",
-    "@xr3ngine/engine": "^0.2.1",
+    "@xr3ngine/engine": "^0.2.2",
     "@xr3ngine/volumetric": "^0.2.1",
     "app-root-path": "^3.0.0",
     "babel-preset-react": "^6.24.1",
