@@ -13,13 +13,20 @@ export const Header = () => {
         <header className="header">
             <div className="header__shell">
                 <div className="header__row">
-                    <Link href="/" className="header__logo" id="header__logo">
-                        <img src={"../img/wildcapture-logo.svg"} />
+                    <Link href="/" >
+                        <a className="header__logo" id="header__logo">
+                            <img src={"../img/wildcapture-logo.svg"} />
+                        </a>
                     </Link>
                     <div className="header__aside">
                         <nav className="header__nav">
-                            <Link href="/whatwedo" className="nav__nav-link">What we do</Link>
-                            <Link href="/volumetric" className="nav__nav-link">Volumetric</Link>
+                            <Link href="/whatwedo">
+                                <a className="nav__nav-link">What we do</a>
+                            </Link>
+                            <Link href="/volumetric">
+                                <a className="nav__nav-link">Volumetric</a>
+                                
+                            </Link>
                             <a href="/#about" className="nav__nav-link">About</a>
                             <a href="/#work" className="nav__nav-link">Work</a>
                             <a href="/#contact" className="nav__nav-link">Contact</a>

@@ -22,6 +22,5 @@ export default () => {
             <Work />
             <Contact />
         </div>
-        
     )
 }
