@@ -2,10 +2,12 @@ import React, { Fragment } from 'react'
 import { About } from '../components/About'
 import { Contact } from '../components/Contact'
 import { Work } from '../components/Work'
+import { Header } from '../components/Header'
 
 export default () => {
     return (
-        <Fragment>
+        <div className="container">
+            <Header />
             <section className="home-banner">
                 <video className="home-banner-movie" autoPlay loop muted>
                     <source src="../movie/banner-slide-movie.mp4"></source>
@@ -19,7 +21,7 @@ export default () => {
             <About />
             <Work />
             <Contact />
-        </Fragment>
+        </div>
         
     )
 }
