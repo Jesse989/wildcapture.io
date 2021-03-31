@@ -12,8 +12,8 @@ export default () => {
             <Header />
             <section className="whatwedo__banner" >
                 <div className="whatwedo__layer">
-                    <img className="banner-image" src={"../img/banner-homepage.png"} />
-                    <img className="whatwedo-banner-small" src={"../img/banner-homepage-small.png"} />
+                    <img className="banner-image" src={"../img/banner-homepage.jpg"} />
+                    <img className="whatwedo-banner-small" src={"../img/banner-homepage-small.jpg"} />
                     <div className="banner-left-layer">
                         <div className="whatwedo__title"><span>Evolving</span> the Digital Worlds</div>
                         <div className="whatwedo__text">
