@@ -92,8 +92,8 @@ export const Contact = () => {
           <div className="contact__title">Contact</div>
           <div className="contact__main">
             <nav className="contact__nav">
-              <Link href="/whatwedo"><span className="contact__nav-link">
-                What we do</span>
+              <Link href="/whatwedo"><a className="contact__nav-link">
+                What we do</a>
               </Link>
               <a href="/#about" className="contact__nav-link">
                 About

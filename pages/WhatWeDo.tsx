@@ -1,12 +1,15 @@
 import React, { Fragment } from 'react'
 import { Contact } from '../components/Contact'
 import { Expertise } from '../components/Expertise'
+import { Header } from '../components/Header'
 import { Partners } from '../components/Partners'
 import { Pipeline } from '../components/Pipeline'
 
 export default () => {
     return (
         <Fragment>
+            <div className="container">
+            <Header />
             <section className="whatwedo__banner" >
                 <div className="whatwedo__layer">
                     <img className="banner-image" src={"../img/banner-homepage.png"} />
@@ -38,6 +41,7 @@ export default () => {
             <Pipeline />
             <Partners />
             <Contact />
+            </div>
         </Fragment>
     )
 }

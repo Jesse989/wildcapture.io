@@ -33,8 +33,13 @@ export const Header = () => {
                         </nav>
                         {toggleHamburgerMenu ? 
                             <nav className="header__hamburger-menu">
-                                <Link href="/whatwedo" className="nav__nav-link" onClick={handleHamburgerMenu}>What we do</Link>
-                                <Link href="/volumetric" className="nav__nav-link" onClick={handleHamburgerMenu}>Volumetric</Link>
+                                <Link href="/whatwedo">
+                                    <a className="nav__nav-link" onClick={handleHamburgerMenu}>What we do</a>     
+                                </Link>
+                                <Link href="/volumetric">
+                                    <a className="nav__nav-link" onClick={handleHamburgerMenu}>Volumetric</a>
+                                    
+                                </Link>
                                 <a href="/#about" className="nav__nav-link" onClick={handleHamburgerMenu}>About</a>
                                 <a href="/#work" className="nav__nav-link" onClick={handleHamburgerMenu}>Work</a>
                                 <a href="/#contact" className="nav__nav-link" onClick={handleHamburgerMenu}>Contact</a>
