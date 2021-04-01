@@ -9,7 +9,7 @@ export default () => {
         <Fragment>
             <section className="volumetric__wrapper" >
               <ReactNoSSR>
-                <VolumetricPlayer style={{ width: '100%', height: '100%' }} meshFilePath={"/samburchfield_tryagain_low.drcs"} videoFilePath={"/samburchfield_tryagain_low.mp4"} />
+                <VolumetricPlayer style={{ width: '100%', height: '100%' }} meshFilePath={"/samburchfield_tryagain_l.drcs"} videoFilePath={"/samburchfield_tryagain_low.mp4"} />
               </ReactNoSSR>
             </section>
         </Fragment>

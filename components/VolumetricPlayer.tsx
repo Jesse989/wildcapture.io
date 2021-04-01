@@ -109,7 +109,15 @@ import DracosisPlayer from "@xr3ngine/volumetric/src/Player"
         renderer,
         meshFilePath: props.meshFilePath,
         videoFilePath: props.videoFilePath,
-        autoplay: false
+        autoplay: false,
+        onMeshBuffering: (progress) => {
+          console.warn('BUFFERING!!', progress);
+          setBufferingProgress(Math.round(progress * 100));
+          setIsBuffering(true);
+        },
+        onFrameShow: () => {
+          setIsBuffering(false);
+        }
       });
       setDracosisSequence(player);
 
@@ -142,33 +150,34 @@ import DracosisPlayer from "@xr3ngine/volumetric/src/Player"
       return () => {
 
         // clear volumetric player
-        // DracosisSequence.dispose();
-        console.log('+++ CLEANUP player', !!player, !!(player as any)?._video);
-        if (player && (player as any)?._video) {
+        console.log('+++ CLEANUP player');
+        player?.dispose();
 
-          // player._video.stop();
-          (player as any)._video.pause();
-          (player as any)._video.parentElement.removeChild((player as any)._video)
-
-          if((player as any)!== null) { (player as any)._video = null }
-          (player as any)._videoTexture.dispose()
-          (player as any)._videoTexture = null
-          window.removeEventListener("resize", onResize)
-          cancelAnimationFrame(animationFrameId)
-          controls.dispose();
-          (player as any).worker.terminate()
-          if ((player as any).bufferingTimer) {
-            clearInterval((player as any).bufferingTimer)
-          }
-          if ((player as any).meshBuffer) {
-            (player as any).meshBuffer.array?.forEach(element => {
-              if (element) {
-                element.bufferGeometry.dispose()
-              }
-            })
-            (player as any).meshBuffer.clear()
-          }
-        }
+        // if (player && (player as any)?._video) {
+        //
+        //   // player._video.stop();
+        //   (player as any)._video.pause();
+        //   (player as any)._video.parentElement.removeChild((player as any)._video)
+        //
+        //   if((player as any)!== null) { (player as any)._video = null }
+        //   (player as any)._videoTexture.dispose()
+        //   (player as any)._videoTexture = null
+        //   window.removeEventListener("resize", onResize)
+        //   cancelAnimationFrame(animationFrameId)
+        //   controls.dispose();
+        //   (player as any).worker.terminate()
+        //   if ((player as any).bufferingTimer) {
+        //     clearInterval((player as any).bufferingTimer)
+        //   }
+        //   if ((player as any).meshBuffer) {
+        //     (player as any).meshBuffer.array?.forEach(element => {
+        //       if (element) {
+        //         element.bufferGeometry.dispose()
+        //       }
+        //     })
+        //     (player as any).meshBuffer.clear()
+        //   }
+        // }
         setDracosisSequence(null);
         setPlayIsStarted(false);
         setIsBuffering(false);

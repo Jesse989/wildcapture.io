@@ -6,7 +6,7 @@ body {
   -moz-transition: all 0.3s ease;;
   -o-transition: all 0.3s ease;;
   transition: all 0.3s ease;
-  font-family: Geogrotesque Cyr;
+  font-family: Geogrotesque Cyr, sans-serif;
   background-color: #111111;
 }
 
@@ -15,7 +15,7 @@ body {
   align-items: center;
   flex-direction: column;
   color: white;
-  font-family: Geogrotesque Cyr;
+    font-family: Geogrotesque Cyr, sans-serif;
   overflow: hidden;
 }
 
@@ -56,8 +56,8 @@ button,input[type="submit"] {
 }
 
 input:-webkit-autofill,
-input:-webkit-autofill:hover, 
-input:-webkit-autofill:focus, 
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
 input:-webkit-autofill:active  {
     -webkit-box-shadow: 0 0 0 30px #03181D inset !important;
 }
@@ -137,7 +137,7 @@ input:-webkit-autofill {
         object-fit: cover;
         display: block;
     }
-    
+
     .home-banner-small {
         // display: none !important;
     }
@@ -353,7 +353,7 @@ section.whatwedo__banner {
 }
 
 @media all and (max-width: 376px) {
-    
+
     .whatwedo__banner::after {
         left: 282px;
     }
@@ -552,7 +552,7 @@ section.whatwedo__banner {
 }
 
 @media all and (max-width: 376px) {
-    
+
 
     .about__layer {
         width: 90%;
@@ -1587,7 +1587,7 @@ section.whatwedo__banner {
         display: none;
     }
 
-    
+
 }
 
 .pipeline {
