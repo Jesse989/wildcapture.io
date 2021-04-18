@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import DracosisPlayer from "@xr3ngine/volumetric/src/Player"
+import DracosisPlayer from "@xr3ngine/volumetric/src/CanvasPlayer"
   import {
     PerspectiveCamera,
     Scene,
@@ -20,6 +20,7 @@ import DracosisPlayer from "@xr3ngine/volumetric/src/Player"
 
     const containerRef = useRef();
     const rendererRef = useRef(null);
+    const playerRef = useRef(null);
     let animationFrameId;
     const [dracosisSequence, setDracosisSequence] = useState(null);
     const [playIsStarted, setPlayIsStarted] = useState(false);
@@ -84,7 +85,7 @@ import DracosisPlayer from "@xr3ngine/volumetric/src/Player"
 
       function render() {
         animationFrameId = requestAnimationFrame(render);
-        renderer.render(scene, camera);
+        playerRef.current.handleRender(renderer, scene, camera);
         controls.update();
       }
 
@@ -119,6 +120,11 @@ import DracosisPlayer from "@xr3ngine/volumetric/src/Player"
           setIsBuffering(false);
         }
       });
+
+      if (!playerRef.current) {
+        playerRef.current = player;
+      }
+
       setDracosisSequence(player);
 
       /*
