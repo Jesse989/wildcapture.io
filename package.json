@@ -63,7 +63,7 @@
     "react-three-fiber": "^5.3.18",
     "react-window": "^1.8.5",
     "sass": "^1.27.0",
-    "three": "^0.126.1",
+    "three": "^0.127.0",
     "three-stdlib": "^1.1.1",
     "ts-migrate": "^0.1.16",
     "typescript": "^4.2.3",
