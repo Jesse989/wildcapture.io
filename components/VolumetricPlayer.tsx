@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import DracosisPlayer from "@xr3ngine/volumetric/src/CanvasPlayer";
+import DracosisPlayer from "@xr3ngine/volumetric/src/Player";
 import {
   PerspectiveCamera,
   Scene,
@@ -86,7 +86,9 @@ export default (props) => {
 
     function render() {
       animationFrameId = requestAnimationFrame(render);
-      playerRef.current.handleRender(renderer, scene, camera);
+      playerRef.current.handleRender(() => {
+        renderer.render(scene, camera);
+      });
       controls.update();
     }
 
