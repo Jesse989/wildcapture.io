@@ -202,7 +202,7 @@ export default (props) => {
 
   // eslint-disable-next-line react/button-has-type
   const playButton = playIsStarted ? null : <button onTouchEnd={() => startPlayer()} onClick={() => startPlayer()} className={"button"}>{videoReady ? "Play" : "Loading..."}</button>;
-  const bufferingIndication = isBuffering ? <div className={"buffering-indication"}>Buffering: {bufferingProgress}%</div> : null;
+  const bufferingIndication = playIsStarted && isBuffering ? <div className={"buffering-indication"}>Buffering...</div> : null;
 
   return <div className="volumetric__player" style={props.style} ref={containerRef}>
     {playButton}
