@@ -11,7 +11,7 @@ export default () => {
             <Header />
             <section className="volumetric__wrapper" >
               <ReactNoSSR>
-                <VolumetricPlayer style={{ width: '100%', height: '100%' }} meshFilePath={"/liam.drcs"} videoFilePath={"/liam.mp4"} />
+                <VolumetricPlayer style={{ width: '100%', height: '100%' }} meshFilePath={"/liamlow.drcs"} videoFilePath={"/liam_low.mp4"} />
               </ReactNoSSR>
             </section>
         </div>
