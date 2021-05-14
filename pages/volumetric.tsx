@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { Fragment } from 'react'
+import dynamic from 'next/dynamic'
 import ReactNoSSR from 'react-no-ssr';
-import { Header } from '../components/Header';
-import VolumetricPlayer from '../components/VolumetricPlayer';
+import { Header } from '../components/Header'
 
+const VolumetricPlayer = dynamic(() => import('../components/VolumetricPlayer'), { ssr: false })
 
 export default () => {
     return (
