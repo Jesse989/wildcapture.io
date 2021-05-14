@@ -90,16 +90,6 @@ module.exports = (
         }]
       })
       config.module.rules.push({
-        test: /\.(gltf)(\?.*$|$)/,
-        use: ['cache-loader',  {
-          loader: "gltf-webpack-loader",
-          options: {
-            name: "[name]-[hash].[ext]",
-            outputPath: "editor/assets/models"
-          }
-        }]
-      })
-      config.module.rules.push({
         test: /\.(bin)$/,
         use: [
           'cache-loader',
