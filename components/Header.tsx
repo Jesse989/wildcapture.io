@@ -20,9 +20,6 @@ export const Header = () => {
                     </Link>
                     <div className="header__aside">
                         <nav className="header__nav">
-                            <Link href="/whatwedo">
-                                <a className="nav__nav-link">What we do</a>
-                            </Link>
                             <Link href="/volumetric">
                                 <a className="nav__nav-link">Volumetric</a>
                                 
@@ -33,9 +30,6 @@ export const Header = () => {
                         </nav>
                         {toggleHamburgerMenu ? 
                             <nav className="header__hamburger-menu">
-                                <Link href="/whatwedo">
-                                    <a className="nav__nav-link" onClick={handleHamburgerMenu}>What we do</a>     
-                                </Link>
                                 <Link href="/volumetric">
                                     <a className="nav__nav-link" onClick={handleHamburgerMenu}>Volumetric</a>
                                     
