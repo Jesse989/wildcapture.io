@@ -1,8 +1,11 @@
 import React, { Fragment } from 'react'
 import { About } from '../components/About'
-import { Contact } from '../components/Contact'
 import { Work } from '../components/Work'
+import { Contact } from '../components/Contact'
 import { Header } from '../components/Header'
+import { Expertise } from '../components/Expertise'
+import { Partners } from '../components/Partners'
+import { Pipeline } from '../components/Pipeline'
 
 export default () => {
     return (
@@ -20,6 +23,9 @@ export default () => {
             </section>
             <About />
             <Work />
+            <Expertise />
+            <Pipeline />
+            <Partners />
             <Contact />
         </div>
     )

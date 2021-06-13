@@ -102,25 +102,12 @@ export const Contact = () => {
                 Work
               </a>
               <a href="/#contact" className="contact__nav-link">
-                Contact
+                Contact Us
               </a>
             </nav>
             <div className="contact__info">
               <div>
-                <span className="contact__info-value">Wilfred Driscoll</span>
-                <span className="contact__info-caption">
-                  Chief Executive Officer
-                </span>
-                <span className="contact__info-email">wd@wildcapture.io</span>
-              </div>
-              <div>
-                <span className="contact__info-value">Louis Normandin</span>
-                <span className="contact__info-caption">
-                  Chief Operating Officer
-                </span>
-                <span className="contact__info-email">
-                  Louis@wildcapture.io
-                </span>
+                <span className="contact__info-email">info@wildcapture.io</span>
               </div>
             </div>
             <form className="contact__form" onSubmit={sendMessage}>

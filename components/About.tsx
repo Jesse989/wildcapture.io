@@ -38,22 +38,6 @@ export const About = () => {
         <div className="about__logo">
           <img src={"../img/about-main-image.svg"} />
         </div>
-        <div className="about__sidebar">
-          <ul>
-            <li className="about__sidebar-item">
-              <span className="sidebar-item__caption">What we do</span>
-            </li>
-            <li className="about__sidebar-item sidebar-item_active">
-              <span className="sidebar-item__caption"> About</span>
-            </li>
-            <li className="about__sidebar-item">
-              <span className="sidebar-item__caption">Work</span>
-            </li>
-            <li className="about__sidebar-item">
-              <span className="sidebar-item__caption">Contact</span>
-            </li>
-          </ul>
-        </div>
       </div>
     </section>
   );
