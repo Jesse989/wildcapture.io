@@ -3,9 +3,7 @@ import { About } from '../components/About'
 import { Work } from '../components/Work'
 import { Contact } from '../components/Contact'
 import { Header } from '../components/Header'
-import { Expertise } from '../components/Expertise'
 import { Partners } from '../components/Partners'
-import { Pipeline } from '../components/Pipeline'
 
 export default () => {
     return (
@@ -16,16 +14,13 @@ export default () => {
                     <source src="../movie/banner-slide-movie.mp4"></source>
                 </video>
                 <video className="home-banner-movie-small" autoPlay loop muted>
-                    <source src="../movie/banner-slide-movie-small.mp4"></source>
+                    <source src="../movie/banner-slide-movie.mp4"></source>
                 </video>
                 <img className="home-banner-large" src={"../img/banner-homepage.jpg"} />
                 <img className="home-banner-small" src={"../img/banner-homepage-small.jpg"} />
             </section>
             <About />
             <Work />
-            <Expertise />
-            <Pipeline />
-            <Partners />
             <Contact />
         </div>
     )

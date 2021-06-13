@@ -183,189 +183,6 @@ canvas{
     //width: 200px;
 }
 
-section.whatwedo__banner {
-    width: 1440px;
-    height: 724px;
-    position: relative;
-    z-index: 1;
-}
-
-.whatwedo__banner::before {
-    content: '';
-    position: absolute;
-    width: 1px;
-    height: 108px;
-    left: 1279px;
-    top: 616px;
-    background: #00CAE1;
-    z-index: 2;
-}
-
-.whatwedo__banner::after {
-    content: 'Watch more';
-    position: absolute;
-    width: 120px;
-    height: 24px;
-    left: 1222px;
-    top: 535px;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 19px;
-    line-height: 24px;
-    color: #00CAE1;
-    transform: rotate(-90deg);
-    z-index: 2;
-}
-
-.whatwedo__layer {
-
-}
-
-.banner-image {
-    position: absolute;
-    z-index: 1;
-}
-
-.banner-left-layer {
-    position: absolute;
-    z-index: 2;
-    width: 710px;
-    height: 724px;
-    background: linear-gradient(255.81deg, #010F12 0%, #06262D 100%);
-}
-
-.whatwedo__title {
-    font-style: normal;
-    font-weight: 600;
-    font-size: 72px;
-    line-height: 89px;
-    margin-top: 100px;
-    padding-left: 160px;
-    color: #00CAE1;
-}
-
-.whatwedo__title span {
-    color: #ffb500
-}
-
-.whatwedo__text {
-    width: 357px;
-    height: 291px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 30px;
-    margin-top: 40px;
-    padding-left: 160px;
-}
-
-.whatwedo__text span {
-    color: #00CAE1;
-    font-size: 24px;
-}
-
-.whatwedo__getintouch {
-    display: none;
-}
-
-.banner-upper-layer {
-    position: absolute;
-    z-index: 3;
-}
-
-.whatwedo-banner-small {
-    display: none;
-}
-
-@media all and (max-width: 1460px) {
-    section.whatwedo__banner {
-        width: 100%;
-        max-width: 414px;
-        height: 1266px;
-        overflow: hidden;
-        position: relative;
-    }
-
-    .whatwedo__layer {
-        width: 100%;
-    }
-
-    img.banner-image {
-        display: none;
-    }
-
-    .whatwedo-banner-small {
-        display: block;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-
-    .whatwedo__banner::before {
-        left: 95%;
-    }
-
-    .whatwedo__banner::after {
-        left: 80%;
-    }
-
-    .banner-left-layer {
-        width: 100%;
-        max-width: 414px;
-        top: 724px;
-    }
-
-    .whatwedo__title {
-        font-size: 48px;
-        line-height: 60px;
-        margin-top: 55px;
-        padding-left: 16px;
-        padding-right: 30px;
-    }
-
-    div.whatwedo__text {
-        padding-left: 16px;
-        height: 202px;
-    }
-
-    .whatwedo__text span {
-        font-size: 18px;
-    }
-
-    .banner-upper-layer {
-        display: none;
-    }
-
-    .whatwedo__getintouch-container {
-        display: flex;
-        justify-content: center;
-        width: 100%;
-        margin-top: 30px;
-    }
-
-    .whatwedo__getintouch {
-        display: block;
-        width: 92%;
-    }
-
-}
-
-@media all and (max-width: 376px) {
-
-    .whatwedo__banner::after {
-        left: 282px;
-    }
-
-    .whatwedo__getintouch {
-        width: 90%;
-    }
-
-}
-
-
-
 .about {
     color: rgba(0, 202, 225, 1);
     width: 1440px;
@@ -612,7 +429,7 @@ section.whatwedo__banner {
     color: rgba(0, 202, 225, 1);
     width: 1440px;
     height: 647px;
-    background: linear-gradient(255.81deg, #010F12 0%, #06262D 100%);
+    background: linear-gradient(255.81deg, #000000 0%, #000000 100%);
     position: relative;
 }
 
@@ -1341,7 +1158,7 @@ section.whatwedo__banner {
     color: white;
     width: 1440px;
     min-height: 724px;
-    background: linear-gradient(224.68deg, #00CAE1 0%, #00A8BB 100%);
+    background: linear-gradient(224.68deg, #000000 0%, #000000 100%);
     box-shadow: 0px 0px 48px rgba(44, 233, 255, 0.25);
     position: relative;
     overflow: hidden;
@@ -1594,7 +1411,7 @@ section.whatwedo__banner {
     color: white;
     width: 1440px;
     min-height: 724px;
-    background: linear-gradient(255.81deg, #010F12 0%, #06262D 100%);
+    background: linear-gradient(255.81deg, #000000 0%, #000000 100%);
     position: relative;
     overflow: hidden;
 }
@@ -2003,7 +1820,7 @@ section.whatwedo__banner {
     color: white;
     width: 1440px;
     min-height: 724px;
-    background: linear-gradient(224.68deg, #00CAE1 0%, #00A8BB 100%);
+    background: linear-gradient(224.68deg, #000000 0%, #000000 100%);
     box-shadow: 0px 0px 48px rgba(44, 233, 255, 0.25);
     position: relative;
     overflow: hidden;
