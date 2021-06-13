@@ -5,8 +5,8 @@ export const Work = () => {
 
     const workVideos = {
         CohortCrowdSystem: 'work-video-item.png',
-        Action Demo: 'work-video-kfu.png',
-        Universal Volumetric: 'work-video-drac.png',
+        ActionDemo: 'work-video-kfu.png',
+        UniversalVolumetric: 'work-video-drac.png',
         Chakra: 'work-video-yoga.png',
     }
 
