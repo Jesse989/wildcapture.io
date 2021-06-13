@@ -25,7 +25,7 @@ export const Expertise = () => {
                             <span>Universal Plugin Development</span>
                             <span>Realtime & USD Render Pipelines</span>
                         </div>
-                        <div className="expertise__item">/>
+                        <div className="expertise__item">
                             <span>Predictive & Physically Accurate CG Cloth</span>
                             <span>Logo Branding and Texture Modification</span>
                             <span>Hair, Prop and Jewelry Integration</span>
