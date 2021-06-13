@@ -3,7 +3,6 @@ import { About } from '../components/About'
 import { Work } from '../components/Work'
 import { Contact } from '../components/Contact'
 import { Header } from '../components/Header'
-import { Partners } from '../components/Partners'
 
 export default () => {
     return (
