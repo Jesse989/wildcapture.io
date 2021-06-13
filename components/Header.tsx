@@ -21,8 +21,7 @@ export const Header = () => {
                     <div className="header__aside">
                         <nav className="header__nav">
                             <Link href="/volumetric">
-                                <a className="nav__nav-link">Volumetric</a>
-                                
+                                <a className="nav__nav-link">Volumetric</a>  
                             </Link>
                             <a href="/#about" className="nav__nav-link">About</a>
                             <a href="/#work" className="nav__nav-link">Work</a>
