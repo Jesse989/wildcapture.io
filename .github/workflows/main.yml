@@ -39,6 +39,8 @@ jobs:
     - name: Deploy to s3
       uses: reggionick/s3-deploy@v3
       with:
-        bucket: ${{ secrets.S3_BUCKET }}
-        bucket-region: ${{ secrets.S3_BUCKET_REGION }}
+        #bucket: ${{ secrets.S3_BUCKET }}
+        bucket: wildcapture-io-new
+        #bucket-region: ${{ secrets.S3_BUCKET_REGION }}
+        bucket-region: us-west-1
         folder: build
