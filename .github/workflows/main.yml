@@ -36,14 +36,9 @@ jobs:
       with:
          name: artifacts
          path: build/
-    - name: Deploy static site to S3 bucket
-      run: aws s3 sync ./build/ s3://wildcapture-io-new --delete
-      
-    #- name: Deploy to s3
-    #  uses: reggionick/s3-deploy@v3
-    #  with:
-    #    bucket: ${{ secrets.S3_BUCKET }}
-    #    bucket-region: ${{ secrets.S3_BUCKET_REGION }}
-    #    folder: build
-    #    no-cache: true
-    #    private: true
+    - name: Deploy to s3
+      uses: reggionick/s3-deploy@v3
+      with:
+        bucket: ${{ secrets.S3_BUCKET }}
+        bucket-region: ${{ secrets.S3_BUCKET_REGION }}
+        folder: build
