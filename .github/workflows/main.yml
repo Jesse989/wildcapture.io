@@ -43,4 +43,5 @@ jobs:
         bucket: ${{ secrets.S3_BUCKET }}
         bucket-region: ${{ secrets.S3_BUCKET_REGION }}
         folder: build
-        
+        no-cache: true
+        private: true
